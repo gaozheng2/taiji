@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
+*::before {
+  box-sizing: border-box;
+}
+#html {
+  word-break: break-all;
+}
+#taiji {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+}
+#taiji::before {
+  content: '';
+  display: block;
+  position: absolute;
+}
+#taiji::after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+@media (max-width: 500px) {
+  #html {
+    height: 50vh;
+    overflow: auto;
+  }
+  #wrapper {
+    height: 50vh;
+  }
+  #taiji {
+    position: relative;
+    top: 10px;
+  }
+}
